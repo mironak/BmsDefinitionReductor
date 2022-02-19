@@ -1,33 +1,40 @@
 # BMS Definition Reductor
 
-BMS�t�@�C���̕ʖ��̎��Ă��鉹���̒�`���ȗ�����B
+BMSファイルの別名の似ている音声の定義を省略する。
 
 # Features
 
-BMS�t�@�C���ɒ�`����Ă���wav�t�@�C�����r����B
-��v�����w�肵�����l�ȏ�̏ꍇ�A�z�u���ꂽ���̔ԍ����������ق��ɒu��������BMS�t�@�C�����o�͂���B
+BMSファイルに定義されているwavファイルを比較する。
+一致率が指定した数値以上の場合、配置された音の番号を小さいほうに置き換えたBMSファイルを出力する。
 
-��Version 0.1 ���݁A�폜������`�͏����Ă��Ȃ����߁ABMSE�����g�p���ď����Ă��������B
+※Version 0.1 現在、削除した定義は消していないため、BMSE等を使用して消してください。
 
 # System requirement
 - [BMSE](http://ucn.tokonats.net/software/bmse/)
 
-���g�p��`�̍폜�A�ԍ����l�߂�̂Ɏg�p�B���l�̋@�\��������̂ł���΂���ő�p�\�B
+未使用定義の削除、番号を詰めるのに使用。同様の機能があるものであればそれで代用可能。
 
 
 # Usage
 
-��BMS Definition Reductor�ł̏���
-1. �uBMS�t�@�C���̓ǂݍ��݁v�{�^���������ABMS�t�@�C����ǂݍ��ށB
-1.  �ǂݍ���BMS�t�@�C���̒u��������#WAV�͈͂���͂���B
-1.  ���֌W������͂���(�������ƑS�R�Ⴄ���ɒu������A�傫���ƒu������ɂ����Ȃ�)�B
-1. �u�J�n�v�{�^���������A�o�͂���t�@�C��������͂��A�u�ۑ��v�{�^���������B
+操作デモ動画
+:-------------------------:
+[![操作デモ](http://img.youtube.com/vi/_MTTS2_fP44/0.jpg)](https://www.youtube.com/watch?v=_MTTS2_fP44)
 
-��BMSE�ł̏���
-1.  �o�͂���BMS�t�@�C����BMSE�ŊJ���B
-1. �u�t�@�C���v���u�ϊ��E�B�U�[�h��\���v�������B
-1. �u�g�p���Ă��Ȃ�#WAV�E#BMP�E"BGA�̒�`�������v�ƁA��`���X�g�̐���v�Ƀ`�F�b�N�����A�u�\�Ȃ�Â��t�H�[�}�b�g(01 - FF)���g���v�̃`�F�b�N���O���B
-1. �u���s�v�{�^���������B
+Sample files(https://drive.google.com/file/d/1ZA9rhmUquSWN_1ZhIbkYSRxegHOm5vLe/view?usp=sharing)
+
+
+■BMS Definition Reductorでの処理
+1. 「BMSファイルの読み込み」ボタンを押し、BMSファイルを読み込む。
+1.  読み込んだBMSファイルの置換したい#WAV範囲を入力する。
+1.  相関係数を入力する(小さいと全然違う音に置換され、大きいと置換されにくくなる)。
+1. 「開始」ボタンを押し、出力するファイル名を入力し、「保存」ボタンを押す。
+
+■BMSEでの処理
+1.  出力したBMSファイルをBMSEで開く。
+1. 「ファイル」→「変換ウィザードを表示」を押す。
+1. 「使用していない#WAV・#BMP・"BGAの定義を消去」と、定義リストの整列」にチェックをつけ、「可能なら古いフォーマット(01 - FF)を使う」のチェックを外す。
+1. 「実行」ボタンを押す。
 
 # License
 
