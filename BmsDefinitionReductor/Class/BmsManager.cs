@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace BmsDefinitionReductor.Class
@@ -84,7 +85,8 @@ namespace BmsDefinitionReductor.Class
         static public (string, string) GetWavData(string line)
         {
             string[] arr = line.Split(new[] { ' ' }, 2);
-            return (arr[0].Substring(4, 2), arr[1]);
+            string baseName = Path.GetFileNameWithoutExtension(arr[1]);
+            return (arr[0].Substring(4, 2), baseName);
         }
 
         /// <summary>

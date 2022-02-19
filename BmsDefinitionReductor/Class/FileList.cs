@@ -41,11 +41,12 @@ namespace BmsDefinitionReductor.Class
                 {
                     if (BmsManager.GetLineCommand(line) == BmsManager.BmsCommand.WAV)
                     {
-                        (string def, string fname)wavData = BmsManager.GetWavData(line);
+                        (string def, string baseName)wavData = BmsManager.GetWavData(line);
                         WavFiles item = new WavFiles { 
                             Num = wavData.def, 
                             NumInteger = RadixConvert.ZZToInt(wavData.def), 
-                            Name = _bmsDirectory + "\\" + wavData.fname };
+                            Name = _bmsDirectory + "\\" + wavData.baseName + ".wav"
+                        };
                         _wavFileList.Add(item);
                     }
                 }
