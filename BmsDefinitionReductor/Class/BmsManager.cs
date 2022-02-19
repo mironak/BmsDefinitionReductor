@@ -83,7 +83,7 @@ namespace BmsDefinitionReductor.Class
         /// <returns>定義番号とwavファイル名</returns>
         static public (string, string) GetWavData(string line)
         {
-            string[] arr = line.Split(' ');
+            string[] arr = line.Split(new[] { ' ' }, 2);
             return (arr[0].Substring(4, 2), arr[1]);
         }
 
